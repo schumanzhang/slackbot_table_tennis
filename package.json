@@ -1,0 +1,24 @@
+{
+  "name": "table_tennis_bot",
+  "version": "0.1.0",
+  "description": "slack bot table tennis",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "slack",
+    "table",
+    "tennis"
+  ],
+  "author": "schumanzhang",
+  "license": "ISC",
+  "dependencies": {
+    "aws-iot-device-sdk": "^2.2.1",
+    "aws-sdk": "^2.344.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "ws": "^6.1.0"
+  }
+}
