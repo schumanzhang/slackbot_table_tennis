@@ -8,7 +8,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 
 app.get('/test', (req, res) => {
-  res.send('test connection successful');
+  res.send('test connection is successful');
 });
 
 app.post('/connection', (req, res) => {
