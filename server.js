@@ -93,7 +93,7 @@ app.post('/connection', (req, res) => {
       let response_text = (detection) ? 'I can see someone playing table tennis' : 'No one is playing table tennis';
       
       let postData = {
-        token : 'xoxb-2608382544-468200448372-ebxjfUazOJNVZtU51YLQ0I4r',
+        // token : 'xoxb-2608382544-468200448372-ebxjfUazOJNVZtU51YLQ0I4r',
         channel: '#pingpingping',
         text: response_text
       };
@@ -103,8 +103,8 @@ app.post('/connection', (req, res) => {
         body: JSON.stringify(postData),
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json',
-            'Authorization': 'xoxb-2608382544-468200448372-ebxjfUazOJNVZtU51YLQ0I4r'
+            'Content-Type': 'application/json; charset=utf-8',
+            'Authorization': 'Bearer xoxb-2608382544-468200448372-ebxjfUazOJNVZtU51YLQ0I4r'
         }
       }
 
