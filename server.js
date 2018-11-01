@@ -84,9 +84,6 @@ app.get('/person', (req, res) => {
 app.post('/connection', (req, res) => {
 
   let payload = req.body;
-
-  // let challenge = req.body.challenge;
-  // res.json({'challenge': challenge});
   if (payload.event.type === 'app_mention') {
     if (payload.event.text.includes('ping pong') || payload.event.text.includes('table tennis')) {
       // Make call to chat.postMessage using bot's token
