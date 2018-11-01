@@ -84,6 +84,8 @@ app.get('/person', (req, res) => {
 app.post('/connection', (req, res) => {
 
   let payload = req.body;
+  res.sendStatus(200);
+
   if (payload.event.type === 'app_mention') {
     if (payload.event.text.includes('ping pong') || payload.event.text.includes('table tennis')) {
       console.log('received message');
@@ -101,17 +103,15 @@ app.post('/connection', (req, res) => {
         body: JSON.stringify(postData),
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'
-            // 'Authorization': 'xoxb-2608382544-468200448372-ebxjfUazOJNVZtU51YLQ0I4r'
+            'Content-Type': 'application/json',
+            'Authorization': 'xoxb-2608382544-468200448372-ebxjfUazOJNVZtU51YLQ0I4r'
         }
       }
 
       request(clientServerOptions, (error, response) => {
         if (!error) {
           console.log('post success');
-          console.log(error, response);
-          // res.sendStatus(200);
-          // res.json(response);
+          console.log(response.body);
         } else {
           console.log('error:', error);
         }
