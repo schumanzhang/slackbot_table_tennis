@@ -94,7 +94,7 @@ app.post('/connection', (req, res) => {
       
       let postData = {
         token : 'xoxb-2608382544-468200448372-ebxjfUazOJNVZtU51YLQ0I4r',
-        channel: 'venture-cuttlefish',
+        channel: '#pingpingping',
         text: response_text
       };
 
