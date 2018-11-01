@@ -106,11 +106,12 @@ app.post('/connection', (req, res) => {
         }
       }
 
-      request(clientServerOptions, function (error, response) {
+      request(clientServerOptions, (error, response) => {
         if (!error) {
           console.log('post success');
-          res.sendStatus(200);
-          res.json(response);
+          console.log(error, response);
+          // res.sendStatus(200);
+          // res.json(response);
         } else {
           console.log('error:', error);
         }
