@@ -29,6 +29,8 @@ let shadowListeners = (shadows) => {
     let signal = JSON.parse(message);
     if (signal.hasOwnProperty('person')) {
       detection = (signal.person > 0.5) ? true : false;
+    } else {
+      detection = false;
     }
   });
 };
