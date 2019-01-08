@@ -7,11 +7,11 @@ const AWSIoTData = require('aws-iot-device-sdk');
 
 AWS.config.region = 'us-east-1';
 AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-  IdentityPoolId: 'us-east-1:35299f6f-fa5f-49bf-b36d-4538cada935e'
+  IdentityPoolId: ''
 });
 
-const host = 'ahc4edec5fxm7-ats.iot.us-east-1.amazonaws.com';
-const iotTopic = '$aws/things/deeplens_6U04ifMvRJGlPCtAPwVwdw/infer';
+const host = '';
+const iotTopic = '';
 
 let detection = false;
 let request = require('request');
@@ -95,7 +95,6 @@ app.post('/connection', (req, res) => {
       let response_text = (detection) ? 'I can see someone playing table tennis' : 'No one is playing table tennis';
       
       let postData = {
-        // token : 'xoxb-2608382544-468200448372-ebxjfUazOJNVZtU51YLQ0I4r',
         channel: '#pingpingping',
         text: response_text
       };
@@ -106,7 +105,7 @@ app.post('/connection', (req, res) => {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json; charset=utf-8',
-            'Authorization': 'Bearer xoxb-2608382544-468200448372-ebxjfUazOJNVZtU51YLQ0I4r'
+            'Authorization': ''
         }
       }
 
